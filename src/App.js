@@ -1,16 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
+import Countries from './component/Counteries/Countries';
+import Person from './component/Person/Person';
 
 function App() {
   return (
     <div className="App">
-      <LoadContries> </LoadContries>
+     <Countries></Countries>
+     <Person></Person>
     </div>
   );
 }
 
-function LoadContries (){
+/* function LoadCountries (){
   const [countries, setcountries] = useState([]);
 
   useEffect( () => {
@@ -25,8 +28,20 @@ function LoadContries (){
     <div>
       <h1> Visition Every country of the world!!!!</h1>
       <h3> Available countries: {countries.length}</h3>
+      {
+       countries.map(country => <Country name = {country.name.common} population = {country.population}></Country>)
+      }
     </div>
   )
 }
+
+function Country (props){
+  return (
+    <div>
+      <h2> Name: {props.name}</h2>
+      <h3>Population: {props.population}</h3>
+    </div>
+  )
+} */
 
 export default App;
